@@ -29,6 +29,6 @@ RUN apk add --no-cache openssl ncurses-libs
 WORKDIR /app
 RUN chown nobody:nobody /app
 USER nobody:nobody
-COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/my_app ./
+COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/elixir_exploration ./
 ENV HOME=/app
-CMD ["bin/my_app", "start"]
+CMD ["bin/elixir_exploration", "start"]
