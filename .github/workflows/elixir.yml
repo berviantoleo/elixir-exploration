@@ -65,8 +65,10 @@ jobs:
       uses: docker/metadata-action@v3
       with:
         images: |
-          bervproject/${{ env.IMAGE_NAME }}
+          berviantoleo/${{ env.IMAGE_NAME }}
           ghcr.io/${{ github.repository }}
+      env:
+        IMAGE_NAME: elixir-exploration
     - name: Build and push Docker images
       uses: docker/build-push-action@v2
       with:
