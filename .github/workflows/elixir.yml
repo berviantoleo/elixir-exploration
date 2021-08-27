@@ -75,7 +75,4 @@ jobs:
         context: .
         push: true
         tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
-      env:
-        DATABASE_URL: ''
-        SECRET_KEY_BASE: ''
+        labels: ${{ steps.meta.outputs.labels }}      
