@@ -42,10 +42,11 @@ jobs:
     - name: Check Format
       run: mix format --check-formatted
     - name: Run tests
-      run: mix coveralls.github
+      run: mix coveralls.xml
       env:
         MIX_ENV: test
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Upload to Codecov
+      run: bash <(curl -s https://codecov.io/bash)
   build-push-docker:
     runs-on: ubuntu-20.04
     if: github.event_name == 'push'
