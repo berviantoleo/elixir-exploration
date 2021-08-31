@@ -16,5 +16,7 @@ defmodule ElixirExploration.Accounts.User do
     user
     |> cast(attrs, [:name, :email, :password, :role])
     |> validate_required([:name, :email, :password, :role])
+    |> validate_format(:email, ~r/@/)
+    |> unique_constraint(:email)
   end
 end
