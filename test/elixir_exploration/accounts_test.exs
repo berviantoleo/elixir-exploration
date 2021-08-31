@@ -10,12 +10,14 @@ defmodule ElixirExploration.AccountsTest do
       email: "test@test.com",
       name: "some name",
       password: "some password",
+      password_confirmation: "some password",
       role: "some role"
     }
     @update_attrs %{
       email: "test1@test.com",
       name: "some updated name",
       password: "some updated password",
+      password_confirmation: "some updated password",
       role: "some updated role"
     }
     @invalid_attrs %{email: nil, name: nil, password: nil, role: nil}
@@ -43,7 +45,6 @@ defmodule ElixirExploration.AccountsTest do
       assert {:ok, %User{} = user} = Accounts.create_user(@valid_attrs)
       assert user.email == "test@test.com"
       assert user.name == "some name"
-      assert user.password == "some password"
       assert user.role == "some role"
     end
 
@@ -56,7 +57,6 @@ defmodule ElixirExploration.AccountsTest do
       assert {:ok, %User{} = user} = Accounts.update_user(user, @update_attrs)
       assert user.email == "test1@test.com"
       assert user.name == "some updated name"
-      assert user.password == "some updated password"
       assert user.role == "some updated role"
     end
 
