@@ -21,12 +21,12 @@ defmodule ElixirExplorationWeb.Router do
 
   # Other scopes may use custom stacks.
   scope "/api" do
-     pipe_through :api
+    pipe_through :api
 
-     forward "graphql", Absinthe.Plug, schema: ElixirExplorationWeb.Schema
+    forward "graphql", Absinthe.Plug, schema: ElixirExplorationWeb.Schema
   end
 
-  if Mix.env == :dev do
+  if Mix.env() == :dev do
     forward "/graphiql", Absinthe.Plug.GraphiQL, schema: ElixirExplorationWeb.Schema
   end
 
