@@ -20,9 +20,15 @@ defmodule ElixirExplorationWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ElixirExplorationWeb do
-  #   pipe_through :api
-  # end
+  scope "/api" do
+     pipe_through :api
+
+     forward "graphql", Absinthe.Plug, schema: ElixirExplorationWeb.Schema
+  end
+
+  if Mix.env == :dev do
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: ElixirExplorationWeb.Schema
+  end
 
   # Enables LiveDashboard only for development
   #
