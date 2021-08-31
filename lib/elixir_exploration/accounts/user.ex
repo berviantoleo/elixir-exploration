@@ -29,8 +29,7 @@ defmodule ElixirExploration.Accounts.User do
   defp put_pass_hash(
          %Ecto.Changeset{
            valid?: true,
-           changes:
-           %{
+           changes: %{
              password: password
            }
          } = changeset
