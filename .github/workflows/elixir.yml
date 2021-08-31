@@ -46,7 +46,10 @@ jobs:
       env:
         MIX_ENV: test
     - name: Upload to Codecov
-      run: bash <(curl -s https://codecov.io/bash)
+      run: |
+        curl -Os https://uploader.codecov.io/latest/linux/codecov
+        chmod +x codecov
+        ./codecov
   build-push-docker:
     runs-on: ubuntu-20.04
     if: github.event_name == 'push'
