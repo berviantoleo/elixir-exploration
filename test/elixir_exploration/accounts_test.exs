@@ -7,13 +7,13 @@ defmodule ElixirExploration.AccountsTest do
     alias ElixirExploration.Accounts.User
 
     @valid_attrs %{
-      email: "some email",
+      email: "test@test.com",
       name: "some name",
       password: "some password",
       role: "some role"
     }
     @update_attrs %{
-      email: "some updated email",
+      email: "test1@test.com",
       name: "some updated name",
       password: "some updated password",
       role: "some updated role"
@@ -41,7 +41,7 @@ defmodule ElixirExploration.AccountsTest do
 
     test "create_user/1 with valid data creates a user" do
       assert {:ok, %User{} = user} = Accounts.create_user(@valid_attrs)
-      assert user.email == "some email"
+      assert user.email == "test@test.com"
       assert user.name == "some name"
       assert user.password == "some password"
       assert user.role == "some role"
@@ -54,7 +54,7 @@ defmodule ElixirExploration.AccountsTest do
     test "update_user/2 with valid data updates the user" do
       user = user_fixture()
       assert {:ok, %User{} = user} = Accounts.update_user(user, @update_attrs)
-      assert user.email == "some updated email"
+      assert user.email == "test1@test.com"
       assert user.name == "some updated name"
       assert user.password == "some updated password"
       assert user.role == "some updated role"
