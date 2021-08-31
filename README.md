@@ -1,5 +1,7 @@
 # ElixirExploration
 
+[![Coverage Status](https://coveralls.io/repos/github/berviantoleo/elixir-exploration/badge.svg?branch=main)](https://coveralls.io/github/berviantoleo/elixir-exploration?branch=main)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
