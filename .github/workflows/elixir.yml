@@ -42,7 +42,10 @@ jobs:
     - name: Check Format
       run: mix format --check-formatted
     - name: Run tests
-      run: mix test
+      run: mix coveralls.github
+      env:
+        MIX_ENV: test
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   build-push-docker:
     runs-on: ubuntu-20.04
     if: github.event_name == 'push'
