@@ -42,7 +42,7 @@ jobs:
     - name: Check Format
       run: mix format --check-formatted
     - name: Run tests
-      run: mix coveralls.xml
+      run: mix coveralls.json
       env:
         MIX_ENV: test
     - name: Upload to Codecov
