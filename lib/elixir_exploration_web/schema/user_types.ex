@@ -15,7 +15,6 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
     @desc """
     Get a list of users
     """
-
     field :users, list_of(:user) do
       resolve(&Resolvers.Users.list_users/2)
     end
