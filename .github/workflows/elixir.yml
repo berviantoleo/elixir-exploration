@@ -31,12 +31,14 @@ jobs:
       with:
         otp-version: '22.2'
         elixir-version: '1.10'
-    - name: Restore dependencies cache
-      uses: actions/cache@v2
+    - uses: actions/cache@v2
       with:
-        path: deps
+        path: |
+          deps
+          _build
         key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
-        restore-keys: ${{ runner.os }}-mix-
+        restore-keys: |
+          ${{ runner.os }}-mix-
     - name: Install dependencies
       run: mix deps.get
     - name: Check Format
