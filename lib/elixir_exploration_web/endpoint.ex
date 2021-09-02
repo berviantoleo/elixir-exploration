@@ -10,11 +10,18 @@ defmodule ElixirExplorationWeb.Endpoint do
     signing_salt: "nuVugInM"
   ]
 
-  socket "/socket", ElixirExplorationWeb.UserSocket,
-    websocket: true,
-    longpoll: false
+  socket "/socket",
+         ElixirExplorationWeb.UserSocket,
+         websocket: true,
+         longpoll: false
 
-  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+  socket "/live",
+         Phoenix.LiveView.Socket,
+         websocket: [
+           connect_info: [
+             session: @session_options
+           ]
+         ]
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -25,6 +32,11 @@ defmodule ElixirExplorationWeb.Endpoint do
     from: :elixir_exploration,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
+
+  plug Plug.Static,
+    at: "/uploads",
+    from: {:elixir_exploration, "uploads"},
+    gzip: false
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

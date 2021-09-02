@@ -14,8 +14,19 @@ defmodule ElixirExplorationWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :upload do
+    plug Plug.Static,
+      at: "/uploads",
+      from: {:elixir_exploration, "uploads"},
+      gzip: false
+  end
+
   scope "/", ElixirExplorationWeb do
     pipe_through :browser
+
+    scope "/uploads" do
+      pipe_through :upload
+    end
 
     get "/", PageController, :index
   end
@@ -23,7 +34,7 @@ defmodule ElixirExplorationWeb.Router do
   # Other scopes may use custom stacks.
   scope "/api" do
     pipe_through :api
-
+    post "upload", ElixirExplorationWeb.UploadController, :create
     forward "graphql", Absinthe.Plug, schema: ElixirExplorationWeb.Schema
   end
 

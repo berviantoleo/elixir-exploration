@@ -54,12 +54,14 @@ defmodule ElixirExploration.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
+      {:argon2_elixir, "~> 2.0"},
       {:absinthe, "~> 1.5.0"},
       {:absinthe_plug, "~> 1.5"},
       {:absinthe_phoenix, "~> 2.0"},
       {:dataloader, "~> 1.0.0"},
       {:excoveralls, "~> 0.10", only: :test},
-      {:cors_plug, "~> 2.0"}
+      {:cors_plug, "~> 2.0"},
+      {:sobelow, "~> 0.11", only: :dev}
     ]
   end
 
