@@ -101,4 +101,19 @@ defmodule ElixirExploration.Accounts do
   def change_user(%User{} = user, attrs \\ %{}) do
     User.changeset(user, attrs)
   end
+
+  @doc """
+  Custom query use ordering
+  """
+  def query(User, params) do
+    field = params[:order] || :id
+    from u in User, order_by: [asc: field(u, ^field)]
+  end
+
+  @doc """
+  Define queryable for Dataloader
+  """
+  def query(queryable, _) do
+    queryable
+  end
 end
