@@ -3,7 +3,7 @@ defmodule ElixirExplorationWeb.SchemaTest do
 
   @users_query """
   query {
-    users {
+    users(order: {orderBy: "name"}) {
       id
       name
       email
@@ -22,7 +22,7 @@ defmodule ElixirExplorationWeb.SchemaTest do
 
   @users_query """
   query {
-    users {
+    users(order: {orderBy: "name"}) {
       id
       name
       email
