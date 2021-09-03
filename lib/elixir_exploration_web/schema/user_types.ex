@@ -25,7 +25,7 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
     Get a list of users
     """
     field :user, :user do
-      arg :id, non_null(:id)
+      arg(:id, non_null(:id))
       resolve(&Resolvers.Users.user_by_id/2)
     end
   end
@@ -35,7 +35,7 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
     Get a list of users by order
     """
     field :users, list_of(:user) do
-      arg :order, non_null(:order_input)
+      arg(:order, non_null(:order_input))
       resolve(&Resolvers.Users.list_users_orderly/2)
     end
   end
@@ -45,7 +45,7 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
       Create a user
     """
     field :create_user, :user do
-      arg :input, non_null(:create_user_input)
+      arg(:input, non_null(:create_user_input))
       resolve(&Resolvers.Users.create_user/3)
     end
   end
