@@ -8,8 +8,6 @@ RUN mix local.hex --force && \
     mix local.rebar --force
 # set build ENV
 ENV MIX_ENV=prod
-ENV DATABASE_URL=''
-ENV SECRET_KEY_BASE=''
 
 # install mix dependencies
 COPY mix.exs mix.lock ./
