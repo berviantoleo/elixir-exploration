@@ -28,6 +28,5 @@ WORKDIR /app
 RUN chown nobody:nobody /app
 USER nobody:nobody
 COPY --from=build --chown=nobody:nobody /app/_build/prod/rel/elixir_exploration ./
-COPY --from=build --chown=nobody:nobody /app/priv ./priv/
 ENV HOME=/app
 CMD ["bin/elixir_exploration", "start"]
