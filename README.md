@@ -1,6 +1,6 @@
 # ElixirExploration
 
-[![Coverage Status](https://coveralls.io/repos/github/berviantoleo/elixir-exploration/badge.svg?branch=main)](https://coveralls.io/github/berviantoleo/elixir-exploration?branch=main)
+[![codecov](https://codecov.io/gh/berviantoleo/elixir-exploration/branch/main/graph/badge.svg?token=1xLXQvDxNA)](https://codecov.io/gh/berviantoleo/elixir-exploration)
 
 To start your Phoenix server:
 
