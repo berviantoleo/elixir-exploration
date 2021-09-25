@@ -18,6 +18,7 @@ defmodule ElixirExplorationWeb.Schema do
   alias ElixirExplorationWeb.Schema
 
   import_types(Schema.UserTypes)
+  import_types(Schema.UploadTypes)
 
   query do
     # import_fields(:get_users)
@@ -27,5 +28,6 @@ defmodule ElixirExplorationWeb.Schema do
 
   mutation do
     import_fields(:create_user)
+    import_fields(:upload_file)
   end
 end

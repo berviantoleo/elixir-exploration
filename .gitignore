@@ -28,3 +28,5 @@ elixir_exploration-*.tar
 /priv/static/
 
 uploads/
+
+env.sh

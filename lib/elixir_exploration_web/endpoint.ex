@@ -33,10 +33,10 @@ defmodule ElixirExplorationWeb.Endpoint do
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
-  plug Plug.Static,
-    at: "/uploads",
-    from: {:elixir_exploration, "uploads"},
-    gzip: false
+  # plug Plug.Static,
+  #  at: "/uploads",
+  #  from: {:elixir_exploration, "uploads"},
+  #  gzip: false
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
