@@ -46,4 +46,32 @@ defmodule ElixirExplorationWeb.SchemaTest do
              ]
            }
   end
+
+  @upload_query """
+  mutation FILE_UPLOAD($fileUpload: Upload!) {
+    uploadFile(input: {file: $fileUpload})
+  }
+  """
+  test "query: file upload success", %{conn: conn} do
+    file_upload = %Plug.Upload{
+      content_type: "text/plain",
+      path: "test/random.txt",
+      filename: "random.txt"
+    }
+
+    result =
+      conn
+      |> post("/api/graphql",
+        query: @upload_query,
+        variables: %{
+          fileUpload: "file_upload"
+        },
+        file_upload: file_upload
+      )
+      |> json_response(200)
+
+    assert result == %{
+             "data" => %{"uploadFile" => "Success"}
+           }
+  end
 end
