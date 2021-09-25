@@ -52,16 +52,6 @@ jobs:
         curl -Os https://uploader.codecov.io/latest/linux/codecov
         chmod +x codecov
         ./codecov
-  deploy:
-    runs-on: ubuntu-20.04
-    if: github.event_name == 'push'
-    needs: build
-    steps:
-    - uses: actions/checkout@v2
-    - name: Deploy
-      run: |
-        git remote add gigalixir https://${{secrets.EMAIL}}:${{secrets.API_KEY}}@git.gigalixir.com/${{secrets.APP_NAME}}.git
-        git push -f gigalixir HEAD:refs/heads/main
   build-push-docker:
     runs-on: ubuntu-20.04
     if: github.event_name == 'push'
