@@ -66,7 +66,8 @@ defmodule ElixirExploration.MixProject do
       {:dataloader, "~> 1.0.0"},
       {:excoveralls, "~> 0.10", only: :test},
       {:cors_plug, "~> 2.0"},
-      {:sobelow, "~> 0.11", only: :dev}
+      {:sobelow, "~> 0.11", only: :dev},
+      {:mimic, "~> 1.5", only: :test}
     ]
   end
 

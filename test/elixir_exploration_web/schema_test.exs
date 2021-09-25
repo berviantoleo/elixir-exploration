@@ -1,5 +1,6 @@
 defmodule ElixirExplorationWeb.SchemaTest do
   use ElixirExplorationWeb.ConnCase
+  use Mimic
 
   @users_query """
   query {
@@ -53,6 +54,9 @@ defmodule ElixirExplorationWeb.SchemaTest do
   }
   """
   test "query: file upload success", %{conn: conn} do
+    ExAws
+    |> stub(:request, fn _ -> {:ok, :done} end)
+
     file_upload = %Plug.Upload{
       content_type: "text/plain",
       path: "test/random.txt",
