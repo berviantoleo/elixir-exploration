@@ -6,9 +6,7 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
   @desc "A user"
   object :user do
     field :id, :id
-    field :name, :string
     field :email, :string
-    field :role, :string
   end
 
   object :get_users do
@@ -55,9 +53,7 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
   end
 
   input_object :create_user_input do
-    field :name, non_null(:string)
     field :password, non_null(:string)
-    field :password_confirmation, non_null(:string)
     field :email, non_null(:string)
   end
 end

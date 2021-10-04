@@ -4,11 +4,9 @@ defmodule ElixirExplorationWeb.SchemaTest do
 
   @users_query """
   query {
-    users(order: {orderBy: "name"}) {
+    users(order: {orderBy: "email"}) {
       id
-      name
       email
-      role
     }
   }
   """
@@ -18,16 +16,14 @@ defmodule ElixirExplorationWeb.SchemaTest do
         "query" => @users_query
       })
 
-    assert json_response(conn, 200) == %{"data" => %{"users" => []}}
+    assert %{"data" => %{"users" => []}} = json_response(conn, 200)
   end
 
   @users_query """
   query {
-    users(order: {orderBy: "name"}) {
+    users(order: {orderBy: "email"}) {
       id
-      name
       email
-      role
       unknownColumn
     }
   }
@@ -41,7 +37,7 @@ defmodule ElixirExplorationWeb.SchemaTest do
     assert json_response(conn, 200) == %{
              "errors" => [
                %{
-                 "locations" => [%{"column" => 5, "line" => 7}],
+                 "locations" => [%{"column" => 5, "line" => 5}],
                  "message" => "Cannot query field \"unknownColumn\" on type \"User\"."
                }
              ]

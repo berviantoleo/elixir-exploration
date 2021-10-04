@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="absinthe_error_payload" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_error_payload/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_error_payload/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_error_payload/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_error_payload/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/absinthe_error_payload/lib" />
+      <root url="file://$PROJECT_DIR$/deps/absinthe_error_payload/lib" />
+      <root url="file://$PROJECT_DIR$/deps/absinthe_error_payload/lib" />
+      <root url="file://$PROJECT_DIR$/deps/absinthe_error_payload/lib" />
+    </SOURCES>
+  </library>
+</component>

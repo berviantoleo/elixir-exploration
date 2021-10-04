@@ -1,0 +1,59 @@
+<component name="libraryTable">
+  <library name="argon2_elixir" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/prod/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/prod/lib/argon2_elixir/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/test/lib/argon2_elixir/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/lib" />
+      <root url="file://$PROJECT_DIR$/deps/argon2_elixir/c_src" />
+    </SOURCES>
+  </library>
+</component>

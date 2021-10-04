@@ -1,5 +1,8 @@
 use Mix.Config
 
+# Only in tests, remove the complexity from the password hashing algorithm
+config :bcrypt_elixir, :log_rounds, 1
+
 # Configure your database
 #
 # The MIX_TEST_PARTITION environment variable can be used
@@ -7,7 +10,7 @@ use Mix.Config
 # Run `mix help test` for more information.
 config :elixir_exploration, ElixirExploration.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "devsecretpassword",
   database: "elixir_exploration_test#{System.get_env("MIX_TEST_PARTITION")}",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
