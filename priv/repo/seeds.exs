@@ -12,30 +12,30 @@
 
 ElixirExploration.Repo.insert!(%ElixirExploration.Accounts.User{
   email: "bervianto.leo@test.com",
-  hashed_password: Argon2.hash_pwd_salt("randompwd123"),
+  hashed_password: Argon2.hash_pwd_salt("randompwd123")
 })
 
 ElixirExploration.Repo.insert!(%ElixirExploration.Accounts.User{
   email: "bervianto.leo.leo@test.com",
-  hashed_password: Argon2.hash_pwd_salt("randompwd123"),
+  hashed_password: Argon2.hash_pwd_salt("randompwd123")
 })
 
 ElixirExploration.Repo.insert!(%ElixirExploration.Accounts.User{
   email: "bervianto@test.com",
-  hashed_password: Argon2.hash_pwd_salt("randompwd123"),
+  hashed_password: Argon2.hash_pwd_salt("randompwd123")
 })
 
 ElixirExploration.Repo.insert!(%ElixirExploration.Accounts.User{
   email: "bervian@test.com",
-  hashed_password: Argon2.hash_pwd_salt("randompwd123"),
+  hashed_password: Argon2.hash_pwd_salt("randompwd123")
 })
 
 ElixirExploration.Repo.insert!(%ElixirExploration.Accounts.User{
   email: "leo@test.com",
-  hashed_password: Argon2.hash_pwd_salt("randompwd123"),
+  hashed_password: Argon2.hash_pwd_salt("randompwd123")
 })
 
 ElixirExploration.Repo.insert!(%ElixirExploration.Accounts.User{
   email: "berv@test.com",
-  hashed_password: Argon2.hash_pwd_salt("randompwd123"),
+  hashed_password: Argon2.hash_pwd_salt("randompwd123")
 })

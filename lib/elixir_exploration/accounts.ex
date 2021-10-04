@@ -116,6 +116,7 @@ defmodule ElixirExploration.Accounts do
   def query(queryable, _) do
     queryable
   end
+
   alias ElixirExploration.Accounts.{User, UserToken, UserNotifier}
 
   ## Database getters
