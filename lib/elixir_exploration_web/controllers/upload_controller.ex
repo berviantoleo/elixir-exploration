@@ -3,8 +3,6 @@ defmodule ElixirExplorationWeb.UploadController do
   @extension_whitelist ~w(.jpg .jpeg .gif .png .pdf)
 
   def create(conn, %{"file" => %Plug.Upload{} = upload}) do
-    IO.inspect(upload)
-
     if validate(upload) do
       path_type = Path.type(upload.filename)
 

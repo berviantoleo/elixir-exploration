@@ -3,8 +3,10 @@ defmodule ElixirExplorationWeb.SchemaTest do
   use Mimic
 
   @users_query """
-  query {
-    users(order: {orderBy: "email"}) {
+  query GET_USERS (
+    $orderInput: OrderInput!
+  ) {
+    users(order: $orderInput) {
       id
       email
     }
@@ -13,15 +15,18 @@ defmodule ElixirExplorationWeb.SchemaTest do
   test "query: users", %{conn: conn} do
     conn =
       post(conn, "/api/graphql", %{
-        "query" => @users_query
+        "query" => @users_query,
+        "variables" => %{"orderInput" => %{"orderBy" => "email"}}
       })
 
     assert %{"data" => %{"users" => []}} = json_response(conn, 200)
   end
 
-  @users_query """
-  query {
-    users(order: {orderBy: "email"}) {
+  @users_failed_query """
+  query GET_USERS (
+    $orderInput: OrderInput!
+  ) {
+    users(order: $orderInput) {
       id
       email
       unknownColumn
@@ -31,13 +36,14 @@ defmodule ElixirExplorationWeb.SchemaTest do
   test "query: users with false params", %{conn: conn} do
     conn =
       post(conn, "/api/graphql", %{
-        "query" => @users_query
+        "query" => @users_failed_query,
+        "variables" => %{"orderInput" => %{"orderBy" => "email"}}
       })
 
     assert json_response(conn, 200) == %{
              "errors" => [
                %{
-                 "locations" => [%{"column" => 5, "line" => 5}],
+                 "locations" => [%{"column" => 5, "line" => 7}],
                  "message" => "Cannot query field \"unknownColumn\" on type \"User\"."
                }
              ]

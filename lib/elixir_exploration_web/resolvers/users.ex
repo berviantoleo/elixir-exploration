@@ -16,6 +16,7 @@ defmodule ElixirExplorationWeb.Resolvers.Users do
   end
 
   def list_users_orderly(%{order: %{order_by: order_by}}, _context) do
+    IO.inspect(order_by)
     import Ecto.Query, only: [from: 2]
     query = from u in User, order_by: [asc: ^order_by]
     {:ok, Repo.all(query)}

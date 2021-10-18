@@ -38,7 +38,9 @@ defmodule ElixirExplorationWeb.Router do
   scope "/api" do
     pipe_through :api
     # post "upload", ElixirExplorationWeb.UploadController, :create
-    forward "graphql", Absinthe.Plug, schema: ElixirExplorationWeb.Schema
+    get "/generate", ElixirExplorationWeb.NumberController, :generate
+    get "/grouped", ElixirExplorationWeb.NumberController, :grouped
+    forward "/graphql", Absinthe.Plug, schema: ElixirExplorationWeb.Schema
   end
 
   if Mix.env() == :dev do

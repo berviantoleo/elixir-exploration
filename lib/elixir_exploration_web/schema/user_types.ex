@@ -33,7 +33,7 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
     Get a list of users by order
     """
     field :users, list_of(:user) do
-      arg(:order, non_null(:order_input))
+      arg(:order, non_null(:user_order_input))
       resolve(&Resolvers.Users.list_users_orderly/2)
     end
   end
@@ -48,13 +48,13 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
     end
   end
 
-  input_object :order_input do
+  input_object :user_order_input do
     field :order_by, :user_order_field
   end
 
   @desc "The selected user order field"
   enum :user_order_field do
-    value :email, description: "Email"
+    value(:email, name: "email", description: "Email")
   end
 
   input_object :create_user_input do
