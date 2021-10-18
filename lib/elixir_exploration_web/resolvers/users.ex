@@ -17,8 +17,7 @@ defmodule ElixirExplorationWeb.Resolvers.Users do
 
   def list_users_orderly(%{order: %{order_by: order_by}}, _context) do
     import Ecto.Query, only: [from: 2]
-    atom_order = String.to_atom(order_by)
-    query = from u in User, order_by: [asc: ^atom_order]
+    query = from u in User, order_by: [asc: ^order_by]
     {:ok, Repo.all(query)}
   end
 end

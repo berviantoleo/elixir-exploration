@@ -49,7 +49,12 @@ defmodule ElixirExplorationWeb.Schema.UserTypes do
   end
 
   input_object :order_input do
-    field :order_by, :string
+    field :order_by, :user_order_field
+  end
+
+  @desc "The selected user order field"
+  enum :user_order_field do
+    value :email, description: "Email"
   end
 
   input_object :create_user_input do
