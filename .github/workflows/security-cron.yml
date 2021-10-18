@@ -1,0 +1,35 @@
+name: "Security Check"
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
+  schedule:
+    - cron: '30 1 * * 6'
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-20.04
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - uses: erlef/setup-beam@v1
+      with:
+        otp-version: '22.2'
+        elixir-version: '1.10'
+    - uses: actions/cache@v2
+      with:
+        path: deps
+        key: ${{ runner.os }}-mix-${{ hashFiles('**/mix.lock') }}
+        restore-keys: ${{ runner.os }}-mix-
+    - name: Install dependencies
+      run: mix deps.get
+    - name: Run Static Code Analysis
+      run: mix sobelow
