@@ -75,7 +75,7 @@ jobs:
           berviantoleo/${{ env.IMAGE_NAME }}
           ghcr.io/${{ github.repository }}
       env:
-        IMAGE_NAME: elixir-exploration
+        IMAGE_NAME: personal-api-elixir
     - name: Build and push Docker images
       uses: docker/build-push-action@v2
       with:
