@@ -69,7 +69,9 @@ defmodule ElixirExploration.MixProject do
       {:excoveralls, "~> 0.10", only: :test},
       {:cors_plug, "~> 2.0"},
       {:sobelow, "~> 0.11", only: :dev},
-      {:mimic, "~> 1.5", only: :test}
+      {:mimic, "~> 1.5", only: :test},
+      {:oauther, "~> 1.1"},
+      {:extwitter, "~> 0.12"}
     ]
   end
 
