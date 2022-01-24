@@ -58,7 +58,7 @@ defmodule ElixirExploration.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:argon2_elixir, "~> 2.0"},
+      {:argon2_elixir, "~> 3.0"},
       {:absinthe_plug, "~> 1.5"},
       {:ex_aws, "~> 2.2"},
       {:ex_aws_s3, "~> 2.0"},
