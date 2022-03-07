@@ -67,7 +67,7 @@ defmodule ElixirExploration.MixProject do
       {:sweet_xml, "~> 0.7"},
       {:dataloader, "~> 1.0.10"},
       {:excoveralls, "~> 0.14", only: :test},
-      {:cors_plug, "~> 2.0"},
+      {:cors_plug, "~> 3.0"},
       {:sobelow, "~> 0.11", only: :dev},
       {:mimic, "~> 1.5", only: :test},
       {:oauther, "~> 1.3"},
