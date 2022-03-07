@@ -30,7 +30,7 @@ jobs:
           # Maps tcp port 5432 on service container to the host
           - 5432:5432
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: erlef/setup-beam@v1
       with:
         otp-version: ${{ matrix.otp }}
@@ -59,7 +59,7 @@ jobs:
     if: github.event_name == 'push'
     needs: build
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
       with:
