@@ -46,7 +46,7 @@ defmodule ElixirExploration.MixProject do
       {:phoenix, "~> 1.6.6"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.7.2"},
-      {:floki, ">= 0.32.0", only: :test},
+      {:floki, ">= 0.32.1", only: :test},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.2.0"},
       {:phoenix_live_reload, "~> 1.3", only: :dev},
@@ -69,7 +69,7 @@ defmodule ElixirExploration.MixProject do
       {:excoveralls, "~> 0.14", only: :test},
       {:cors_plug, "~> 3.0"},
       {:sobelow, "~> 0.11", only: :dev},
-      {:mimic, "~> 1.7", only: :test},
+      {:mimic, "~> 1.7.1", only: :test},
       {:oauther, "~> 1.3"},
       {:extwitter, "~> 0.13"}
     ]
