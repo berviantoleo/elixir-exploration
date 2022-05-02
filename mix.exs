@@ -45,7 +45,7 @@ defmodule ElixirExploration.MixProject do
       {:bcrypt_elixir, "~> 3.0"},
       {:phoenix, "~> 1.6.6"},
       {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.7.2"},
+      {:ecto_sql, "~> 3.8.1"},
       {:floki, ">= 0.32.1", only: :test},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.2.0"},
