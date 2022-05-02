@@ -22,6 +22,6 @@ jobs:
       uses: actions/checkout@v3
     - name: Static Analysis use Sobelow
       uses: sobelow/action@v1
-    - uses: github/codeql-action/upload-sarif@v1
+    - uses: github/codeql-action/upload-sarif@v2
       with:
         sarif_file: results.sarif
