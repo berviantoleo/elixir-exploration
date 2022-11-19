@@ -22,7 +22,7 @@ COPY lib lib
 RUN mix do compile, release
 
 # prepare release image
-FROM alpine:3.16.2 AS app
+FROM alpine:3.16.3 AS app
 RUN apk add --no-cache openssl ncurses-libs
 WORKDIR /app
 RUN chown nobody:nobody /app
