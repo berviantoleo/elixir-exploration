@@ -7,27 +7,22 @@ on:
 jobs:
   build:
     name: Build and test
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        otp: ['22.2', '24']
-        elixir-version: ['1.12', '1.13']
+        otp: ['24', '25']
+        elixir-version: ['1.13', '1.14']
     services:
-      # Label used to access the service container
       postgres:
-        # Docker Hub image
-        image: postgres:13-alpine
-        # Provide the password for postgres
+        image: postgres:15-alpine
         env:
           POSTGRES_PASSWORD: devsecretpassword
-        # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
         ports:
-          # Maps tcp port 5432 on service container to the host
           - 5432:5432
     steps:
     - uses: actions/checkout@v3
@@ -49,13 +44,9 @@ jobs:
       env:
         MIX_ENV: test
         AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION}}
-    - name: Upload to Codecov
-      run: |
-        curl -Os https://uploader.codecov.io/latest/linux/codecov
-        chmod +x codecov
-        ./codecov
+    - uses: codecov/codecov-action@v3
   build-push-docker:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     if: github.event_name == 'push'
     needs: build
     steps:
