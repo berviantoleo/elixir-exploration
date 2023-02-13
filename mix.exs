@@ -48,7 +48,7 @@ defmodule ElixirExploration.MixProject do
       {:ecto_sql, "~> 3.9.0"},
       {:floki, ">= 0.32.1", only: :test},
       {:postgrex, ">= 0.0.0"},
-      {:phoenix_html, "~> 3.2.0"},
+      {:phoenix_html, "~> 3.3.0"},
       {:phoenix_live_reload, "~> 1.3", only: :dev},
       {:phoenix_live_dashboard, "~> 0.6"},
       {:esbuild, "~> 0.4", runtime: Mix.env() == :dev},
