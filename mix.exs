@@ -43,7 +43,7 @@ defmodule ElixirExploration.MixProject do
   defp deps do
     [
       {:bcrypt_elixir, "~> 3.0"},
-      {:phoenix, "~> 1.6.6"},
+      {:phoenix, "~> 1.7.1"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.9.0"},
       {:floki, ">= 0.32.1", only: :test},
