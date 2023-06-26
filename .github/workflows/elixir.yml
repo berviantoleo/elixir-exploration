@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         otp: ['24', '25']
-        elixir-version: ['1.13', '1.14']
+        elixir-version: ['1.14', '1.15']
     services:
       postgres:
         image: postgres:15-alpine
