@@ -25,7 +25,7 @@ secret_key_base =
 
 host_name =
   if System.get_env("APP_NAME"),
-    do: System.get_env("APP_NAME") <> 'gigalixirapp.com',
+    do: System.get_env("APP_NAME") <> ~c"gigalixirapp.com",
     else: System.get_env("HOSTNAME")
 
 config :elixir_exploration, ElixirExplorationWeb.Endpoint,
