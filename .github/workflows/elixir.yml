@@ -44,7 +44,7 @@ jobs:
       env:
         MIX_ENV: test
         AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION}}
-    - uses: codecov/codecov-action@v3
+    - uses: codecov/codecov-action@v4
   build-push-docker:
     runs-on: ubuntu-22.04
     if: github.event_name == 'push'
