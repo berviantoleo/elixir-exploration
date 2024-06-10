@@ -64,7 +64,7 @@ defmodule ElixirExploration.MixProject do
       {:ex_aws, "~> 2.2"},
       {:ex_aws_s3, "~> 2.3"},
       {:hackney, "~> 1.18"},
-      {:poison, "~> 5.0"},
+      {:poison, "~> 6.0"},
       {:sweet_xml, "~> 0.7"},
       {:dataloader, "~> 1.0.10"},
       {:excoveralls, "~> 0.14", only: :test},
