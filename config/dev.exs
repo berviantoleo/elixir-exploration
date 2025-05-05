@@ -1,4 +1,4 @@
-use Config
+import Config
 
 # Configure your database
 config :elixir_exploration, ElixirExploration.Repo,
