@@ -24,7 +24,7 @@ defmodule ElixirExplorationWeb.SchemaTest do
 
   @users_failed_query """
   query GET_USERS (
-    $orderInput: OrderInput!
+    $orderInput: UserOrderInput!
   ) {
     users(order: $orderInput) {
       id
