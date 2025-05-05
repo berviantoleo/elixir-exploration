@@ -7,14 +7,14 @@ on:
 jobs:
   build:
     name: Build and test
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
-        otp: ['24', '25']
-        elixir-version: ['1.14', '1.15']
+        otp: ['26', '27']
+        elixir-version: ['1.17', '1.18']
     services:
       postgres:
-        image: postgres:15-alpine
+        image: postgres:17-alpine
         env:
           POSTGRES_PASSWORD: devsecretpassword
         options: >-
@@ -46,7 +46,7 @@ jobs:
         AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION}}
     - uses: codecov/codecov-action@v5
   build-push-docker:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     if: github.event_name == 'push'
     needs: build
     steps:
