@@ -5,7 +5,7 @@
 # is restricted to this project.
 
 # General application configuration
-use Mix.Config
+use Config
 
 config :elixir_exploration,
   ecto_repos: [ElixirExploration.Repo]
