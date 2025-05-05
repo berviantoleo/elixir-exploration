@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        otp: ['24', '25']
-        elixir-version: ['1.14', '1.15']
+        otp: ['26', '27']
+        elixir-version: ['1.17', '1.18']
     services:
       postgres:
         image: postgres:15-alpine
