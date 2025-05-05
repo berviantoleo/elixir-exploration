@@ -69,7 +69,7 @@ defmodule ElixirExplorationWeb do
       import Phoenix.View
 
       import ElixirExplorationWeb.ErrorHelpers
-      import ElixirExplorationWeb.Gettext
+      use Gettext, backend: ElixirExplorationWeb.Gettext
       alias ElixirExplorationWeb.Router.Helpers, as: Routes
     end
   end
