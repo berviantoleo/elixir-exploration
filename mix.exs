@@ -67,7 +67,7 @@ defmodule ElixirExploration.MixProject do
       {:hackney, "~> 1.18"},
       {:poison, "~> 6.0"},
       {:sweet_xml, "~> 0.7"},
-      {:dataloader, "~> 1.0.10"},
+      {:dataloader, "~> 2.0.2"},
       {:excoveralls, "~> 0.14", only: :test},
       {:cors_plug, "~> 3.0"},
       {:sobelow, "~> 0.11", only: :dev},
