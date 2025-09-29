@@ -57,7 +57,7 @@ defmodule ElixirExploration.MixProject do
       {:swoosh, "~> 1.6"},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
-      {:gettext, "~> 0.19"},
+      {:gettext, "~> 1.0"},
       {:jason, "~> 1.3"},
       {:plug_cowboy, "~> 2.5"},
       {:argon2_elixir, "~> 4.0"},
